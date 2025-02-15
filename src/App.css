@@ -1,0 +1,54 @@
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  transition: opacity 0.5s ease-in-out;
+  overflow-x: hidden;
+}
+
+.section {
+  height: 100dvh;
+  scroll-snap-align: start;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  position: relative;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--clr-text);
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+#hero {
+  background-color: var(--clr-primary);
+}
+
+#about {
+  background-color: var(--clr-accent);
+}
+
+#projects {
+  background-color: var(--clr-surface);
+}
+
+#contact {
+  background-color: var(--clr-accent);
+}
+.design-line {
+  width: 50px;
+  height: 4px;
+  background-color: var(--clr-hover);
+}
+@media (max-width: 768px) {
+  .section {
+    justify-content: flex-start;
+    padding-top: 5rem;
+  }
+}
