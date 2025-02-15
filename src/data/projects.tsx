@@ -29,7 +29,7 @@ export const projects: Project[] = [
   {
     title: ' Chat GPT Website',
     description:
-      'Built from a figma file and populated with content from Chat GPT ',
+      'Built with Vanilla Javascript and css from a figma file and populated with content from Chat GPT.',
     link: 'https://mygpt3.netlify.app',
     image: GptImg,
   },
@@ -40,11 +40,11 @@ export const projects: Project[] = [
     link: 'https://nomad-pads.vercel.app/',
     image: PreanaImg,
   },
-  {
-    title: 'React Carousel',
-    description:
-      '3d Carousel built for React that allows users to dynamically place cards in a modern carousel.',
-    link: '#',
-    image: RainyCityImg,
-  },
+  // {
+  //   title: 'React Carousel',
+  //   description:
+  //     '3d Carousel built for React that allows users to dynamically place cards in a modern carousel.',
+  //   link: '#',
+  //   image: RainyCityImg,
+  // },
 ];
