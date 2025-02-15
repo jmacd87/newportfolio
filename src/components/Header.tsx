@@ -8,6 +8,8 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ activeSection }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <header className="header">
       <nav className="nav">
@@ -30,6 +32,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
             <a
               href="#hero"
               className={`nav-link ${activeSection === 'hero' ? 'active' : ''}`}
+              onClick={closeMenu}
             >
               Home
             </a>
@@ -40,6 +43,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
               className={`nav-link ${
                 activeSection === 'about' ? 'active' : ''
               }`}
+              onClick={closeMenu}
             >
               About
             </a>
@@ -50,6 +54,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
               className={`nav-link ${
                 activeSection === 'projects' ? 'active' : ''
               }`}
+              onClick={closeMenu}
             >
               Projects
             </a>
@@ -60,6 +65,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
               className={`nav-link ${
                 activeSection === 'contact' ? 'active' : ''
               }`}
+              onClick={closeMenu}
             >
               Contact
             </a>
