@@ -2,7 +2,8 @@ import { Project } from '../types';
 import JourneyGeniusImg from '../assets/JourneyGenius.png';
 import NomadPadsImg from '../assets/NomadPads.png';
 import RainyCityImg from '../assets/RainyCity.png';
-
+import GptImg from '../assets/gpt2.png';
+import PreanaImg from '../assets/Preana.png';
 export const projects: Project[] = [
   {
     title: 'Journey Genius',
@@ -21,29 +22,29 @@ export const projects: Project[] = [
   {
     title: 'Rainy City Blog',
     description:
-      'This robust application features an Express/Mongoose backend that connects to a MongoDB database to efficiently fetch and display blog posts. The dynamic frontend, built with React and TypeScript, delivers a modern, responsive user experience, creating a powerful full-stack solution for seamless content management and browsing.',
+      'This robust application features an Express/Mongoose backend that connects to a MongoDB database to efficiently fetch and display blog posts. The dynamic frontend, built with React and TypeScript, delivers a modern, responsive user experience, creating a powerful full stack solution for seamless content management and browsing.',
     link: 'https://rainycityblog.vercel.app/',
     image: RainyCityImg,
   },
   {
-    title: 'Journey Genius',
+    title: ' Chat GPT Website',
     description:
-      'Fully responsive web application utilizing React for the front end and Node.js with Express for the back end. Integrated the Priceline API to enable users to search for flights effortlessly. Additionally, incorporated an AI chatbot powered by OpenAI to assist users in vacation planning. The application seamlessly links to Google Flights for booking. ',
-    link: 'https://journey-genius.vercel.app/',
-    image: JourneyGeniusImg,
+      'Built from a figma file and populated with content from Chat GPT ',
+    link: 'https://mygpt3.netlify.app',
+    image: GptImg,
   },
   {
-    title: 'Nomad Pads',
+    title: 'Healthcare Dashboard',
     description:
-      'Full stack property rental app that uses Next.js and React for a fast, SEO-friendly UI, Next-Auth for secure user management, and Mongoose with MongoDB for robust data storage. It features interactive maps with Mapbox GL and image optimization via Cloudinary, all styled with Tailwind CSS for a modern, responsive design.',
+      'Front end of a customer dashboard where users can manage user information, coverage, and members. Built with React, Material UI, ContextAPI',
     link: 'https://nomad-pads.vercel.app/',
-    image: NomadPadsImg,
+    image: PreanaImg,
   },
   {
-    title: 'Rainy City Blog',
+    title: 'React Carousel',
     description:
-      'This robust application features an Express/Mongoose backend that connects to a MongoDB database to efficiently fetch and display blog posts. The dynamic frontend, built with React and TypeScript, delivers a modern, responsive user experience, creating a powerful full-stack solution for seamless content management and browsing.',
-    link: 'https://rainycityblog.vercel.app/',
+      '3d Carousel built for React that allows users to dynamically place cards in a modern carousel.',
+    link: '#',
     image: RainyCityImg,
   },
 ];

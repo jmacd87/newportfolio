@@ -20,7 +20,7 @@ const Layout: React.FC = () => {
     };
 
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.5,
+      threshold: 0.1, // adjust threshold as needed
     });
 
     sections.current.forEach((section) => {
@@ -38,11 +38,15 @@ const Layout: React.FC = () => {
     };
   }, []);
 
+  // Helper function to add the active class if the section is active.
+  const getSectionClass = (id: string) =>
+    `section ${activeSection === id ? 'active' : ''}`;
+
   return (
     <div className="scroll-container">
       <Header activeSection={activeSection} />
       <section
-        className="section"
+        className={getSectionClass('hero')}
         id="hero"
         ref={(el) => {
           sections.current[0] = el;
@@ -51,7 +55,7 @@ const Layout: React.FC = () => {
         <Hero />
       </section>
       <section
-        className="section"
+        className={getSectionClass('about')}
         id="about"
         ref={(el) => {
           sections.current[1] = el;
@@ -60,7 +64,7 @@ const Layout: React.FC = () => {
         <About />
       </section>
       <section
-        className="section"
+        className={getSectionClass('projects')}
         id="projects"
         ref={(el) => {
           sections.current[2] = el;
@@ -69,7 +73,7 @@ const Layout: React.FC = () => {
         <Projects />
       </section>
       <section
-        className="section"
+        className={getSectionClass('contact')}
         id="contact"
         ref={(el) => {
           sections.current[3] = el;

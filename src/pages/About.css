@@ -76,6 +76,7 @@
   animation: fadeInUp 1s ease 0.8s forwards;
   opacity: 0;
   box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  margin-top: -25%;
 }
 
 .image-wrapper::before {
@@ -98,12 +99,14 @@
   height: 100%;
   object-fit: cover;
   border-radius: inherit;
-  filter: grayscale(100%) contrast(1.5);
+  filter: grayscale(100%) contrast(1);
   transition: all 0.3s ease;
+  opacity: 0.8;
 }
 
 .profile-image:hover {
-  filter: grayscale(0%) contrast(1.2);
+  /* filter: grayscale(0%) contrast(1); */
+  opacity: 1;
 }
 
 @media (max-width: 768px) {

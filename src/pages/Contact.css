@@ -51,7 +51,7 @@
 .form-input {
   width: 100%;
   padding: 1rem;
-  background: var(--clr-surface-light);
+  background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 6px;
   color: var(--clr-text);
@@ -67,14 +67,14 @@
 
 .textarea {
   min-height: 150px;
-  resize: vertical;
+  resize: none;
 }
 
 .submit-button {
-  background: var(--clr-hover);
-  color: var(--clr-primary);
+  background: transparent;
+  color: var(--clr-gradient1);
   padding: 1.25rem 2.5rem;
-  border: none;
+  border: 2px solid var(--clr-gradient1);
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
@@ -86,8 +86,15 @@
 
 .submit-button:hover {
   background: var(--clr-gradient1);
+  color: var(--clr-primary);
+  opacity: 0.6;
 }
-
+.success-message {
+  color: var(--clr-gradient1);
+}
+.error-message {
+  color: #d32f2f;
+}
 @media (max-width: 1024px) {
   #contact {
     height: 100vh;

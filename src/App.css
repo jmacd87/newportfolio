@@ -15,9 +15,14 @@
   justify-content: center;
   padding: 2rem;
   box-sizing: border-box;
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  opacity: 0.5;
+  /* transition: opacity 0.5s ease-in-out; */
   position: relative;
+}
+
+.section.active {
+  opacity: 1;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .section-title {
@@ -46,9 +51,29 @@
   height: 4px;
   background-color: var(--clr-hover);
 }
+
 @media (max-width: 768px) {
   .section {
     justify-content: flex-start;
     padding-top: 5rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

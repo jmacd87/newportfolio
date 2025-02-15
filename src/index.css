@@ -8,6 +8,7 @@
   --clr-hover: #51acc9;
   --clr-gradient1: #64ffda;
   --clr-gradient2: #4dabf7;
+  --clr-seafoam: rgba(100, 255, 218, 0.3);
 }
 
 *,
@@ -80,4 +81,12 @@ a {
 :focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 2px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

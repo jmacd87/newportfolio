@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './Header.css';
 
 interface HeaderProps {
@@ -5,13 +6,26 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ activeSection }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="header">
       <nav className="nav">
         <h1 className="logo">
           <a href="#hero">Joel MacDonald</a>
         </h1>
-        <ul className="nav-list">
+
+        <button
+          className={`menu-toggle ${menuOpen ? 'open' : ''}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </button>
+
+        <ul className={`nav-list ${menuOpen ? 'open' : ''}`}>
           <li>
             <a
               href="#hero"
@@ -55,4 +69,5 @@ const Header: React.FC<HeaderProps> = ({ activeSection }) => {
     </header>
   );
 };
+
 export default Header;

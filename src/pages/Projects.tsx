@@ -22,14 +22,11 @@ const Projects: React.FC = () => {
 
         {totalPages > 1 && (
           <button className="toggle-arrow" onClick={handleArrowClick}>
-            <span
-              className="arrow-icon"
-              style={{
-                transform: page === 0 ? 'rotate(0deg)' : 'rotate(180deg)',
-              }}
-            >
-              &gt;
-            </span>
+            {page === 0 ? (
+              <i className="far fa-arrow-alt-circle-right arrow-icons"></i>
+            ) : (
+              <i className="far fa-arrow-alt-circle-left arrow-icons"></i>
+            )}
           </button>
         )}
       </div>

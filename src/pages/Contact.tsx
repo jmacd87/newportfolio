@@ -4,16 +4,48 @@ import './Contact.css';
 type Props = {};
 
 export default function Contact({}: Props) {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
+  const [error, setError] = useState<string>('');
+  const [messageSuccessful, setMessageSuccessful] = useState<boolean | null>(
+    null
+  );
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log({ name, email, message });
-    setName('');
-    setEmail('');
-    setMessage('');
+  const handleSubmit = async (event: React.FormEvent) => {
+    setMessageSuccessful(false);
+    setError('');
+    event.preventDefault();
+    const form = event.target as HTMLFormElement;
+    const formData = new FormData(form);
+
+    formData.append('access_key', `${import.meta.env.VITE_EMAIL_API}`);
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: json,
+    }).then((res) => res.json());
+
+    if (res.success) {
+      console.log('Success', res);
+      setName('');
+      setEmail('');
+      setMessage('');
+      setMessageSuccessful(true);
+    }
+    if (!res.success) {
+      setError(res.message);
+    }
+    setTimeout(() => {
+      setMessageSuccessful(null);
+    }, 10000);
   };
 
   return (
@@ -36,6 +68,7 @@ export default function Contact({}: Props) {
             <input
               type="text"
               id="name"
+              name="first_name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               className="form-input"
@@ -50,6 +83,7 @@ export default function Contact({}: Props) {
             <input
               type="email"
               id="email"
+              name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="form-input"
@@ -64,6 +98,7 @@ export default function Contact({}: Props) {
             <textarea
               id="message"
               value={message}
+              name="message"
               onChange={(e) => setMessage(e.target.value)}
               className="form-input textarea"
               required
@@ -73,6 +108,12 @@ export default function Contact({}: Props) {
           <button type="submit" className="submit-button">
             SEND MESSAGE
           </button>
+          {messageSuccessful && (
+            <p className="success-message">
+              Your email has been successfully sent!
+            </p>
+          )}
+          {error && <p className="error-message">{error}</p>}
         </form>
       </div>
     </div>
