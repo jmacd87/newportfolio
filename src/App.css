@@ -57,6 +57,12 @@
     justify-content: flex-start;
     padding-top: 5rem;
   }
+  .section .section-title {
+    font-size: 1.5rem;
+  }
+  .design-line {
+    display: none;
+  }
 }
 
 @keyframes fadeIn {
