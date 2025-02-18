@@ -132,11 +132,11 @@ nav {
     border: 1px solid var(--clr-hover);
     background-color: var(--clr-primary);
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     display: flex;
+    padding-top: 10%;
   }
 
   .nav-list.open {
