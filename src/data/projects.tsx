@@ -3,15 +3,22 @@ import JourneyGeniusImg from '../assets/JourneyGenius.png';
 import NomadPadsImg from '../assets/NomadPads.png';
 import RainyCityImg from '../assets/RainyCity.png';
 import GptImg from '../assets/gpt2.png';
-import PreanaImg from '../assets/Preana.png';
+import PreanaImg from '../assets/preana.png';
+import Trendwave from '../assets/Trendwave.png';
 export const projects: Project[] = [
   {
-    title: 'Journey Genius',
+    title: 'Trendwave',
     description:
-      'Fully responsive web application utilizing React for the front end and Node.js with Express for the back end. Integrated the Priceline API to enable users to search for flights effortlessly. Additionally, incorporated an AI chatbot powered by OpenAI to assist users in vacation planning. The application seamlessly links to Google Flights for booking. ',
-    link: 'https://journey-genius.vercel.app/',
-    githubLink: 'https://github.com/jmacd87/JourneyGenius',
-    image: JourneyGeniusImg,
+      'Fullstack web application for beginner crypto traders to learn and practice their skills. Built with Next.js, Contentful, MongoDB, Tailwind, and Mongoose.',
+    link: 'https://trendwave.ltd/',
+    image: Trendwave,
+  },
+  {
+    title: 'Preana Dashboard',
+    description:
+      'Front end of a personal finance and budgeting dashboard where users can manage their finances. Built with React, Material UI, ContextAPI.',
+    link: 'https://preana.netlify.app/',
+    image: PreanaImg,
   },
   {
     title: 'Nomad Pads',
@@ -20,6 +27,14 @@ export const projects: Project[] = [
     link: 'https://nomad-pads.vercel.app/',
     githubLink: 'https://github.com/jmacd87/NomadPads',
     image: NomadPadsImg,
+  },
+  {
+    title: 'Journey Genius',
+    description:
+      'Fully responsive web application utilizing React for the front end and Node.js with Express for the back end. Integrated the Priceline API to enable users to search for flights effortlessly. Additionally, incorporated an AI chatbot powered by OpenAI to assist users in vacation planning. The application seamlessly links to Google Flights for booking. ',
+    link: 'https://journey-genius.vercel.app/',
+    githubLink: 'https://github.com/jmacd87/JourneyGenius',
+    image: JourneyGeniusImg,
   },
   {
     title: 'Rainy City Blog',
@@ -36,13 +51,7 @@ export const projects: Project[] = [
     link: 'https://mygpt3.netlify.app',
     image: GptImg,
   },
-  {
-    title: 'Healthcare Dashboard',
-    description:
-      'Front end of a customer dashboard where users can manage user information, coverage, and members. Built with React, Material UI, ContextAPI',
-    link: 'https://nomad-pads.vercel.app/',
-    image: PreanaImg,
-  },
+
   // {
   //   title: 'React Carousel',
   //   description:

@@ -63,7 +63,7 @@ const Projects: React.FC = () => {
                 >
                   View Project
                 </a>
-                {project.githubLink && (
+                {/* {project.githubLink && (
                   <a
                     href={project.githubLink}
                     className="project-link"
@@ -72,7 +72,7 @@ const Projects: React.FC = () => {
                   >
                     View Github
                   </a>
-                )}
+                )} */}
               </div>
             </article>
           ))}
