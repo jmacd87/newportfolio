@@ -3,7 +3,7 @@ import JourneyGeniusImg from '../assets/JourneyGenius.png';
 import NomadPadsImg from '../assets/NomadPads.png';
 import RainyCityImg from '../assets/RainyCity.png';
 import FrontendImg from '../assets/FrontendImg.png';
-import PreanaImg from '../assets/preana.png';
+import PreanaImg from '../assets/Preana2.png';
 import Trendwave from '../assets/Trendwave.png';
 export const projects: Project[] = [
   {
