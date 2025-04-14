@@ -4,7 +4,7 @@ import NomadPadsImg from '../assets/NomadPads.png';
 import RainyCityImg from '../assets/RainyCity.png';
 import FrontendImg from '../assets/FrontendImg.png';
 import PreanaImg from '../assets/Preana2.png';
-import Trendwave from '../assets/Trendwave.png';
+import Trendwave from '../assets/trendwave.png';
 export const projects: Project[] = [
   {
     title: 'Trendwave',
